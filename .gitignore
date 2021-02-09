@@ -1,0 +1,9 @@
+# Ignore
+*
+# Allow
+!/.aliases
+!/.irbrc
+!/.gitignore
+!/.gitconfig
+!/.vimrc
+!/.zshrc

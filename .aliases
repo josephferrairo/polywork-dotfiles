@@ -1,0 +1,9 @@
+alias ls='command ls -AG'
+
+alias vim='nvim'
+
+alias chrome='open -a "Google Chrome"'
+
+alias vscode='open -a "Visual Studio Code"'
+
+alias gitclean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'

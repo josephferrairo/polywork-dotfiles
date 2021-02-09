@@ -1,0 +1,23 @@
+[color]
+  ui = true
+[user]
+	name = Joe Ferrairo
+  email = josephferrairo@gmail.com
+[core]
+  editor = nvim
+[apply]
+  whitespace = nowarn
+[push]
+  default = simple
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+[credential]
+  helper = osxkeychain
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
