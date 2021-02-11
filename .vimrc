@@ -9,8 +9,9 @@ Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/tpope/vim-rails.git'
 Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
 Plug 'https://github.com/adelarsq/vim-matchit.git'
+Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-let g:prettier#autoformat = 1
+" let g:prettier#autoformat = 1
 
 Plug 'https://github.com/vim-airline/vim-airline.git'
 set laststatus=2 " Always Display vim-airline
