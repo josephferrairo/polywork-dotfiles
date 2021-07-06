@@ -12,6 +12,7 @@ Plug 'https://github.com/adelarsq/vim-matchit.git'
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " let g:prettier#autoformat = 1
+Plug 'codota/tabnine-vim'
 
 Plug 'https://github.com/vim-airline/vim-airline.git'
 set laststatus=2 " Always Display vim-airline
@@ -61,26 +62,26 @@ Plug 'https://github.com/ap/vim-css-color.git'
 Plug 'maksimr/vim-jsbeautify'
 map <c-f> :call JsBeautify()<cr>
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" let g:deoplete#enable_at_startup = 1
 
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-let g:tern#command = ["tern"]
-let g:deoplete#sources#ternjs#case_insensitive = 0
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#ternjs#filetypes = [
-      \ 'jsx',
-      \ 'javascript.jsx',
-      \ 'vue',
-      \ 'html'
-      \ ]
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" let g:tern#command = ["tern"]
+" let g:deoplete#sources#ternjs#case_insensitive = 0
+" let g:deoplete#sources#ternjs#types = 1
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#ternjs#filetypes = [
+"       \ 'jsx',
+"       \ 'javascript.jsx',
+"       \ 'vue',
+"       \ 'html'
+"       \ ]
 
 Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
