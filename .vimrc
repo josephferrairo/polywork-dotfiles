@@ -13,6 +13,9 @@ Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " let g:prettier#autoformat = 1
 Plug 'codota/tabnine-vim'
+Plug 'mattn/emmet-vim'
+Plug 'alvan/vim-closetag'
+Plug 'tkatsu/vim-erblint'
 
 Plug 'https://github.com/vim-airline/vim-airline.git'
 set laststatus=2 " Always Display vim-airline
@@ -31,7 +34,7 @@ if executable('ag')
 endif
 
 Plug 'https://github.com/rking/ag.vim.git'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'https://github.com/mhinz/vim-signify.git'
 Plug 'https://github.com/ntpeters/vim-better-whitespace.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
