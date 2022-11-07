@@ -13,9 +13,11 @@ Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " let g:prettier#autoformat = 1
 Plug 'codota/tabnine-vim'
+Plug 'https://github.com/github/copilot.vim'
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
 Plug 'tkatsu/vim-erblint'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'https://github.com/vim-airline/vim-airline.git'
 set laststatus=2 " Always Display vim-airline
@@ -44,7 +46,6 @@ autocmd BufWritePre * StripWhitespace
 
 map <C-C> :Commentary<CR>
 
-
 Plug 'https://github.com/scrooloose/nerdtree.git'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -52,7 +53,6 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 Plug 'https://github.com/ngmy/vim-rubocop'
 Plug 'https://github.com/vim-ruby/vim-ruby.git'
-Plug 'https://github.com/tpope/vim-haml.git'
 Plug 'https://github.com/stephpy/vim-yaml.git'
 Plug 'https://github.com/ervandew/supertab.git'
 Plug 'https://github.com/tpope/vim-endwise.git'
@@ -62,8 +62,8 @@ Plug 'mtdl9/vim-log-highlighting'
 Plug 'https://github.com/ap/vim-css-color.git'
 
 " Autocomplete
-Plug 'maksimr/vim-jsbeautify'
-map <c-f> :call JsBeautify()<cr>
+" Plug 'maksimr/vim-jsbeautify'
+" map <c-f> :call JsBeautify()<cr>
 
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -123,6 +123,9 @@ call plug#end()
 " enable neomake
 " call neomake#configure#automake('nrwi', 500)
 
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set foldlevel=99
 filetype plugin indent on    " required
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
